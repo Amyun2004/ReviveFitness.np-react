@@ -31,7 +31,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="nav-btn HIDEONMOBILE">
-          <a href="#">Join Us</a>
+          <Link to="/contact">Join Us</Link>
         </div>
 
         {/* Sidebar */}
@@ -57,7 +57,8 @@ export default function Navbar() {
             <hr />
             <li>
               <div className="nav-btn">
-                <a href="#">Join Us</a>
+                <Link to="/contact">Join Us</Link>
+
               </div>
             </li>
             <li className="hidebutton">

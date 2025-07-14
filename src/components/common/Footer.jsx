@@ -1,6 +1,8 @@
 import instagramIcon from '../../assets/logo/icons8-instagram.svg';
 import facebookIcon from '../../assets/logo/icons8-facebook.svg';
 import righthandlogo from  '../../assets/logo/RandHand.png';
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer>
@@ -12,10 +14,11 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/programs">Programs</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+
             <li><a href="#location">Location</a></li>
           </ul>
         </div>

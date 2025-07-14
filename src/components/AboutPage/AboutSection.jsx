@@ -1,4 +1,5 @@
 import rightHandLogo from '../../assets/logo/RandHand.png'
+import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
   return (
@@ -24,11 +25,9 @@ export default function AboutSection() {
           <p>
             At ReviveFitness, our team is passionate, qualified, and always here to guide you—whether you're a beginner or a pro. We’re committed to helping you achieve real results, in a supportive and judgment-free zone.
           </p>
-          <a href="contact.html" className="join-us-btn">
-            Join Us
-          </a>
+          <Link to="/contact" className="join-us-btn">Join Us</Link>
         </div>
       </div>
     </section>
-  );
-}
+  )
+};

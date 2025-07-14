@@ -2,6 +2,9 @@ import React from "react";
 import RandHandLogo from "../../assets/logo/RandHand.png";
 import ReviveLogo from "../../assets/logo/Revivefitness.png";
 import model from '../../assets/img_gym/sreejandaiback2a.png';
+import { Link } from 'react-router-dom';
+
+
 export default function Intro() {
   return (
     <>
@@ -11,7 +14,8 @@ export default function Intro() {
           <p className="quote">“Unleash your true self”</p>
           <p className="about-trainers">with Nepal's Best Trainer(s)</p>
           <div className="nav-btn">
-            <a href="#">Join us</a>
+            <Link to="/contact">Join Us</Link>
+
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-// src/components/ProgramPricingSection.jsx
+
 
 export default function ProgramPricingSection() {
   return (
