@@ -18,8 +18,6 @@ export default function Footer() {
             <li><Link to="/programs">Programs</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-
-            <li><a href="#location">Location</a></li>
           </ul>
         </div>
         <div className="footer-contact">

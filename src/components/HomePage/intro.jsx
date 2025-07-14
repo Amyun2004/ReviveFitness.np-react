@@ -14,7 +14,7 @@ export default function Intro() {
           <p className="quote">“Unleash your true self”</p>
           <p className="about-trainers">with Nepal's Best Trainer(s)</p>
           <div className="nav-btn">
-            <Link to="/contact">Join Us</Link>
+            <Link to="">Join Us</Link>
 
           </div>
         </div>

@@ -18,7 +18,6 @@ export default function Navbar() {
           <li><Link to="/about" className='hideOnMobile'>About</Link></li>
           <li><Link to="/programs" className='hideOnMobile'>Programs</Link></li>
           <li><Link to="/contact" className='hideOnMobile'>Contact</Link></li>
-          <li><a href="#Location" className='hideOnMobile'>Location</a></li>
           <li><a href="#Products" className='hideOnMobile'>Membership</a></li>
         </ul>
 
@@ -31,7 +30,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="nav-btn HIDEONMOBILE">
-          <Link to="/contact">Join Us</Link>
+          <Link to="">Join Us</Link>
         </div>
 
         {/* Sidebar */}
@@ -51,13 +50,11 @@ export default function Navbar() {
             <hr />
             <li><Link to="/contact" onClick={() => setSidebarOpen(false)}>Contact</Link></li>
             <hr />
-            <li><a href="#Location" onClick={() => setSidebarOpen(false)}>Location</a></li>
-            <hr />
             <li><a href="#Products" onClick={() => setSidebarOpen(false)}>Membership</a></li>
             <hr />
             <li>
               <div className="nav-btn">
-                <Link to="/contact">Join Us</Link>
+                <Link to="">Join Us</Link>
 
               </div>
             </li>
