@@ -6,7 +6,7 @@ import {programs} from './programsData';
 export default function ProgramGallery() {
   return (
     <>
-    <span class="scroll-hint">⇠ Scroll ⇢</span>
+    <span className="scroll-hint">⇠ Scroll ⇢</span>
     <div className="services-content">
       
       {programs.map((prog, i) => (

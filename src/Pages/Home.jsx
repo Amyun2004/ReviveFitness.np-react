@@ -4,7 +4,7 @@ import Navbar from "../components/common/Navbar";
 import Intro from '../components/HomePage/intro'
 import '../CSS/Style.css'
 import TrainerSection from "../components/AboutPage/TrainerSection";
-import ProgramGallery from "../components/ProgramPage/ProgramsGallery";
+import ProgramGallery from "../components/ProgramPage/ProgramsProvided";
 import LocationSection from "../components/AboutPage/LocationSection";
 
 export default function Home() {

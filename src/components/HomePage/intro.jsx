@@ -2,10 +2,13 @@ import React from "react";
 import RandHandLogo from "../../assets/logo/RandHand.png";
 import ReviveLogo from "../../assets/logo/Revivefitness.png";
 import model from '../../assets/img_gym/sreejandaiback2a.png';
-import { Link } from 'react-router-dom';
+import Signup from '../LoginPage/SignupReviveFitness';
+import {useState} from 'react';
 
 
 export default function Intro() {
+  const [showSignup, setShowSignup] = useState(false);
+
   return (
     <>
       <section id="home" style={{backgroundImage: `url(${model})`}}>
@@ -14,7 +17,7 @@ export default function Intro() {
           <p className="quote">“Unleash your true self”</p>
           <p className="about-trainers">with Nepal's Best Trainer(s)</p>
           <div className="nav-btn">
-            <Link to="">Join Us</Link>
+            <a onClick={() => setShowSignup(true)}>Join Us</a>
 
           </div>
         </div>
@@ -40,7 +43,58 @@ export default function Intro() {
             </p>
           </div>
         </div>
+        
       </section>
+      {showSignup && (
+            <div
+              className="modal-overlay"
+              onClick={() => setShowSignup(false)}
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0, 0, 0, 0.8)', 
+                display: 'flex',
+                justifyContent: 'center',              
+                alignItems: 'center',                
+                zIndex: 1000                           
+              }}
+            >
+              <div
+                className="modal-content"
+                onClick={e => e.stopPropagation()}
+                style={{
+                  background: '#1a1a1a',
+                  padding: '2rem',
+                  borderRadius: '1rem',               
+                  position: 'relative',
+                  width: '90%',
+                  maxWidth: '500px',                  
+                  color: 'white',
+                }}
+              >
+                <button
+                  className="modal-close"
+                  onClick={() => setShowSignup(false)}
+                  style={{
+                    position: 'absolute',
+                    top: '1rem',
+                    right: '1rem',
+                    background: 'none',
+                    color: 'white',
+                    border: 'none',
+                    fontSize: '1.5rem',               
+                    cursor: 'pointer',
+                  }}
+                >
+                  ✖
+                </button>
+                <Signup />
+              </div>
+            </div>
+      )}
     </>
   );
 }

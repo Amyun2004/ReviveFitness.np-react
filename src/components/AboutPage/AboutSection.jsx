@@ -1,7 +1,9 @@
 import rightHandLogo from '../../assets/logo/RandHand.png'
-import { Link } from 'react-router-dom';
-
+import {useState} from 'react';
+import Signup from '../LoginPage/SignupReviveFitness';
 export default function AboutSection() {
+  const [showSignup, setShowSignup] = useState(false);
+
   return (
     <section className="section-about">
       <h1>
@@ -25,9 +27,62 @@ export default function AboutSection() {
           <p>
             At ReviveFitness, our team is passionate, qualified, and always here to guide you—whether you're a beginner or a pro. We’re committed to helping you achieve real results, in a supportive and judgment-free zone.
           </p>
-          <Link to="/contact" className="join-us-btn">Join Us</Link>
+          <a onClick = {() => setShowSignup(true)} className="join-us-btn">Join Us</a> 
         </div>
       </div>
+      {showSignup && (
+      <div
+        className="modal-overlay"
+        onClick={() => setShowSignup(false)}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.8)', 
+          display: 'flex',
+          justifyContent: 'center',              
+          alignItems: 'center',                
+          zIndex: 1000                           
+        }}
+      >
+        <div
+          className="modal-content"
+          onClick={e => e.stopPropagation()}
+          style={{
+            background: '#1a1a1a',
+            padding: '2rem',
+            borderRadius: '1rem',               
+            position: 'relative',
+            width: '90%',
+            maxWidth: '500px',                  
+            color: 'white',
+          }}
+        >
+          <button
+            className="modal-close"
+            onClick={() => setShowSignup(false)}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              background: 'none',
+              color: 'white',
+              border: 'none',
+              fontSize: '1.5rem',               
+              cursor: 'pointer',
+            }}
+          >
+            ✖
+          </button>
+          <Signup />
+        </div>
+      </div>
+)
+}
+
     </section>
+    
   )
 };
